@@ -1,7 +1,15 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Function describtion:
+## makeCacheMatrix: creates an object from a matrix, eligible for cacheSolve
+## cacheSolve: returns an inverse matrix to a matrix passed by an object created in "makeCacheMatrix"
 
-## Write a short comment describing this function
+
+## makeCacheMatrix.R:
+## Inputs: x : a square matrix
+## Ouptuts: x : an object with methods: 
+## $setOriginal - saves an original input matrix to the object
+## $getOriginal - returns original input matrix "x"
+## $setInverse - saves an inverse matrix to matrix "x"
+## $getInvers - returns an iverse matrix of matrix "x"
 
 makeCacheMatrix <- function(x = matrix()) 
 {
@@ -31,7 +39,10 @@ makeCacheMatrix <- function(x = matrix())
 }
 
 
-## Write a short comment describing this function
+## casheSolve.R
+## inputs: x: an object from function makeCacheMatrix
+## outputs: inv - returns cached iverse matrix to the matrix "x", in case that "x" is known
+##          invComp - returns computed inverse matrix to "x" and stores it to cache.
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
